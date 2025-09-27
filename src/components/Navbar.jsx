@@ -1,28 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import './Navbar.css'; // optional for additional styling
 
 function Navbar() {
+  const location = useLocation(); // to highlight active link
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
-        <Link className="navbar-brand" to="/">My Portfolio</Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/projects">Projects</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
-          </ul>
-        </div>
+    <nav className="navbar">
+      <div className="logo">
+        <Link to="/">MyPortfolio</Link>
       </div>
+      <ul className="nav-links">
+        <li><Link to="/" className={location.pathname === "/" ? "active" : ""}>Home</Link></li>
+        <li><Link to="/projects" className={location.pathname === "/projects" ? "active" : ""}>Projects</Link></li>
+        <li><Link to="/about" className={location.pathname === "/about" ? "active" : ""}>About</Link></li>
+        <li><Link to="/contact" className={location.pathname === "/contact" ? "active" : ""}>Contact</Link></li>
+      </ul>
     </nav>
   );
 }

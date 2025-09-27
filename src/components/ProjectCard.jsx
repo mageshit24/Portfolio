@@ -1,16 +1,30 @@
 import React from "react";
+import './ProjectCard.css';
 
-function ProjectCard({ title, description, link }) {
+function ProjectCard({ project }) {
   return (
-    <div className="col-md-4 mb-4" data-aos="fade-up">
-      <div className="card h-100 shadow-sm">
-        <div className="card-body">
-          <h5 className="card-title">{title}</h5>
-          <p className="card-text">{description}</p>
-          <a href={link} target="_blank" rel="noreferrer" className="btn btn-primary">
+    <div className="card project-card" data-aos="fade-up">
+      {project.video ? (
+        <video
+          src={project.video}
+          controls
+          className="project-media"
+        ></video>
+      ) : (
+        <img
+          src={project.image}
+          alt={project.title}
+          className="project-media"
+        />
+      )}
+      <div className="card-body">
+        <h3>{project.title}</h3>
+        <p>{project.description}</p>
+        {project.link && (
+          <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn-primary">
             View Project
           </a>
-        </div>
+        )}
       </div>
     </div>
   );
