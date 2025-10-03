@@ -1,0 +1,75 @@
+.footer {
+  width: 100%;
+  background: linear-gradient(90deg, #FFF5F5, #FFD6D6);
+  color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* Remove justify-content: space-between to allow natural stacking */
+  padding: 1.5rem 1rem 0.5rem 1rem; /* smaller bottom padding */
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  font-family: 'Arial', sans-serif;
+  z-index: 10;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.footer-social a {
+  color: #333;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #FF6B6B;
+  transform: scale(1.3);
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footer-contact div a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-contact div a:hover {
+  color: #FF6B6B;
+  transform: scale(1.05);
+}
+
+.footer-icon {
+  font-size: 1.1rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 0.5rem;
+  padding-bottom: 0.3rem; /* added bottom padding to push it closer */
+  font-size: 0.85rem;
+  color: #555;
+}

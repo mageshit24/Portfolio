@@ -12,7 +12,7 @@ function Home() {
         height="150"
       />
       <h1 className="display-4">Hi, I'm Magesh Hariram K</h1>
-      <p className="lead">Java | MERN | IoT Developer</p>
+      <p className="lead">Final Year B.Tech IT Student | Full Stack Developer (MERN & Java) | Frontend & Backend Development | HTML, CSS, React, Express.js, Node.js | MongoDB & MySQL | Python | IoT & AI Innovator | Cloud & Data Enthusiast</p>
       <a href="/projects" className="btn btn-primary btn-lg mt-3">View My Work</a>
     </div>
   );

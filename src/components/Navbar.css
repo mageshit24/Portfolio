@@ -1,36 +1,65 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #FFFFFF;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  background: #FF6B6B;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
 }
 
-.navbar .logo a {
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* logo left, menu right */
+  align-items: center;
+  padding: 0.8rem 2rem;
+  flex-wrap: wrap; /* optional if links overflow on small screens */
+}
+
+.logo a {
   font-size: 1.5rem;
-  font-weight: 700;
-  color: #FF6B6B;
+  font-weight: bold;
+  color: #fff;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
-.navbar .nav-links {
+.logo a:hover {
+  color: #FFD6D6;
+}
+
+.nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-.navbar .nav-links a {
-  color: #212121;
+.nav-links li a {
   text-decoration: none;
+  color: #fff;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s, transform 0.2s;
 }
 
-.navbar .nav-links a:hover,
-.navbar .nav-links a.active {
-  color: #FF6B6B;
+.nav-links li a:hover {
+  color: #FFD6D6;
+  transform: scale(1.05);
+}
+
+.nav-links li a.active {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+}
+
+/* Remove column layout on mobile */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.8rem 1rem;
+    flex-direction: row; /* keep horizontal */
+    justify-content: space-between;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
 }

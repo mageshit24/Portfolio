@@ -26,7 +26,7 @@ function Contact() {
       <div className="contact-info">
         <div>
           <h4>Email</h4>
-          <p>mageshhariramk@gmail.com</p>
+          <a href="mailto:mageshhariramk@gmail.com?subject=Hello%20Magesh&body=I%20would%20like%20to%20connect%20with%20you.">mageshhariramk@gmail.com</a>
         </div>
         <div>
           <h4>Phone</h4>
