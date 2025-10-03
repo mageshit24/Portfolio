@@ -37,28 +37,18 @@
   }
 }
 
-/* Flex column layout to make footer sticky */
 html, body, #root {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 .app-container {
-  min-height: 100vh; /* full viewport height */
   display: flex;
   flex-direction: column;
+  min-height: 100vh; /* full viewport height */
 }
 
 .content {
-  flex: 1; /* takes remaining space, pushes footer down */
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;            /* no sideways page scroll */
-  overscroll-behavior-x: none;   /* prevent horizontal rubber band effect */
-  overscroll-behavior-y: none;/* allow vertical scroll with bounce */
+  flex: 1; /* takes remaining space, pushes footer to bottom */
 }
