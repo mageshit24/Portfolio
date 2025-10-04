@@ -3,6 +3,8 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
   background-color: #F5F5F5;
   color: #212121;
   font-family: 'Poppins', sans-serif;
@@ -10,13 +12,14 @@ html, body {
 
 /* Page Wrapper to push footer */
 .page-container {
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 .content-wrap {
-  flex: 1;
+  flex: 1 0 auto;
   padding: 2rem;
 }
 
@@ -32,7 +35,9 @@ header {
 
 /* Footer */
 footer {
-  background-color: #FF6B6B; /* Vibrant footer */
+  flex-shrink: 0;      /* Add this line */
+  margin-top: auto;    /* Add this line */
+  background-color: #FF6B6B;
   color: #FFFFFF;
   padding: 2rem;
   text-align: center;
@@ -56,6 +61,7 @@ button:hover, .btn-primary:hover {
   background-color: #FF8787;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+  color: #111;
 }
 
 /* Links */

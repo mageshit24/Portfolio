@@ -55,6 +55,7 @@
 
 .resume-button:hover {
   background-color: #ff8787;
+  color: #111;
   transform: scale(1.05);
 }
 
