@@ -47,14 +47,3 @@ html, body, #root {
   overscroll-behavior-x: none; /* prevent horizontal rubber-band */
   overscroll-behavior-y: contain; /* prevent vertical page dragging outside, allow scroll inside content */
 }
-
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* full viewport height */
-}
-
-.content {
-  flex: 1; /* takes remaining space, pushes footer to bottom */
-  overflow-y: auto; /* enable vertical scroll for long content */
-}

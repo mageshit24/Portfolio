@@ -13,9 +13,9 @@ function App() {
 
   return (
     <Router>
-      <div className="app-container">
+      <div className="page-container">
         <Navbar />
-        <div className="content">
+        <div className="content-wrap">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
